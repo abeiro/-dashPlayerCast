@@ -23,11 +23,20 @@ var app = {
         
         document.addEventListener('deviceready', function(){
             var HandleIntent = function (Intent) {
-                console.log(intent);
+                console.log(Intent);
                 // With intent you'll do almost everything        
                 if(Intent.hasOwnProperty('data')){
                         // Do something with the File
-                    console.log(Intent);
+                    console.log(Intent.data);
+		    URL = Intent.data; 
+                    window.plugins.webintent.startActivity({
+  			   action: window.plugins.webintent.ACTION_VIEW,
+     			   url: 'http://chicago.amplayer.xyz/CastMediaPlayerStreamingDRM/player.html?URL='+URL},
+     			   function() {navigator.app.exitApp();},
+     			   function() {alert('Failed to open URL via Android Intent')}
+);
+			    
+                    
                 } else {
                     alert("The app was opened manually and there's not file to open");
                 }

@@ -6,7 +6,11 @@
     "config_munge": {
         "files": {}
     },
-    "installed_plugins": {},
+    "installed_plugins": {
+        "com.borismus.webintent": {
+            "PACKAGE_NAME": "xyz.amplayer.chicago"
+        }
+    },
     "dependent_plugins": {
         "com.napolitano.cordova.plugin.intent": {
             "PACKAGE_NAME": "xyz.amplayer.chicago"
