@@ -1,0 +1,18 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {},
+    "dependent_plugins": {
+        "com.napolitano.cordova.plugin.intent": {
+            "PACKAGE_NAME": "xyz.amplayer.chicago"
+        },
+        "cordova-custom-config": {
+            "PACKAGE_NAME": "xyz.amplayer.chicago"
+        }
+    }
+}

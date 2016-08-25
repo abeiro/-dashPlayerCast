@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="xyz.amplayer.chicago" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>dashPlayerCast</name>
+    <description>
+	Send MPEG-DASH files to ChromeCast
+    </description>
+    <author email="augusto.beiro@gmail.com" href="http://chicago.amplayer.xyz/dashPlayerCast">
+	Augusto Beiro Salanova
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <platform name="android">
+        <allow-intent href="http://*" />
+        <config-file parent="./application/activity" target="AndroidManifest.xml">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+		<data android:host="*" />
+                <data android:pathPattern=".*\\.mpd" />
+            </intent-filter>
+        </config-file>
+    <preference name="android-targetSdkVersion" value ="19" />
+    </platform>
+    <engine name="android" spec="~5.2.2" />
+</widget>
